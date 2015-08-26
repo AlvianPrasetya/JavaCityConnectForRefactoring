@@ -101,7 +101,7 @@ public class CityConnect {
 	public static void main(String[] args) {
 		showToUserWithBreak(WELCOME_MESSAGE);
 		while (true) {
-			System.out.print(MESSAGE_ENTER_COMMAND);
+			showToUserWithoutBreak(MESSAGE_ENTER_COMMAND);
 			String userCommand = scanner.nextLine();
 			String feedback = executeCommand(userCommand);
 			showToUserWithBreak(feedback);
@@ -118,6 +118,10 @@ public class CityConnect {
 
 	private static void showToUserWithBreak(String text) {
 		System.out.println(text);
+	}
+	
+	private static void showToUserWithoutBreak(String text) {
+		System.out.print(text);
 	}
 
 	public static String executeCommand(String userCommand) {
