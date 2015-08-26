@@ -218,7 +218,7 @@ public class CityConnect {
 	 *    newStartLocation and newEndLocation. Returns NOT_FOUND if not found.
 	 */
 	private static int  getPositionOfExistingRoute(String newStartLocation,
-			String newEndLocation) {
+												   String newEndLocation) {
 		for (int i = 0; i < route.length; i++) {
 
 			String existing_start_location = route[i][STORAGE_POSITION_START_LOCATION];
