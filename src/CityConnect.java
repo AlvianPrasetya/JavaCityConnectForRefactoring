@@ -121,21 +121,22 @@ public class CityConnect {
 	}
 
 	public static String executeCommand(String userCommand) {
-		if (userCommand.trim().equals("")) {
+		String trimmedUserCommand = userCommand.trim();
+		if (trimmedUserCommand.equals("")) {
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 		}
 
-		String commandTypeString = getFirstWord(userCommand);
+		String commandTypeString = getFirstWord(trimmedUserCommand);
 
 		COMMAND_TYPE commandType = determineCommandType(commandTypeString);
 
 		switch (commandType) {
 		case ADD_ROUTE:
-			return addRoute(userCommand);
+			return addRoute(trimmedUserCommand);
 		case GET_DISTANCE:
-			return getDistance(userCommand);
+			return getDistance(trimmedUserCommand);
 		case INVALID:
-			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
+			return String.format(MESSAGE_INVALID_FORMAT, trimmedUserCommand);
 		case EXIT:
 			System.exit(0);
 		default:
