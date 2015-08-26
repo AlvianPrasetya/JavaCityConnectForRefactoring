@@ -203,8 +203,7 @@ public class CityConnect {
 		int position = getPositionOfExistingRoute(newStartLocation, newEndLocation);
 
 		if (position == NOT_FOUND) {
-			return String.format(MESSAGE_NO_ROUTE, newStartLocation,
-					newEndLocation);
+			return String.format(MESSAGE_NO_ROUTE, newStartLocation, newEndLocation);
 		} 
 		else 
 		{
