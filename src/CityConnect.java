@@ -99,12 +99,12 @@ public class CityConnect {
 	 * ====================================================================
 	 */
 	public static void main(String[] args) {
-		showToUser(WELCOME_MESSAGE);
+		showToUserWithBreak(WELCOME_MESSAGE);
 		while (true) {
 			System.out.print(MESSAGE_ENTER_COMMAND);
 			String userCommand = scanner.nextLine();
 			String feedback = executeCommand(userCommand);
-			showToUser(feedback);
+			showToUserWithBreak(feedback);
 		}
 	}
 
@@ -116,7 +116,7 @@ public class CityConnect {
 	 * ====================================================================
 	 */
 
-	private static void showToUser(String text) {
+	private static void showToUserWithBreak(String text) {
 		System.out.println(text);
 	}
 
