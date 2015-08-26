@@ -265,8 +265,7 @@ public class CityConnect {
 			return MESSAGE_NO_SPACE;
 		}
 
-		addRouteAtPosition(newStartLocation, newEndLocation, distance,
-				slotPosition);
+		addRouteAtPosition(newStartLocation, newEndLocation, distance, slotPosition);
 
 		return String.format(MESSAGE_ADDED, newStartLocation, newEndLocation,
 				distance);
